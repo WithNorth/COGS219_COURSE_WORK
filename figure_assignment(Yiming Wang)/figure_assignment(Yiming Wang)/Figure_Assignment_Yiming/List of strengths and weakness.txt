@@ -1,0 +1,7 @@
+Strengths:
+1. clear plot
+2. notice the peak and mark the radical distance of that peak
+
+Weaknesses:
+1. No title
+2. Not sure the meaning of the x-axis and the y-axis for people not familiar with this area
