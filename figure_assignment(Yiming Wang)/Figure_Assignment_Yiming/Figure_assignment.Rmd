@@ -149,12 +149,9 @@ print(nrow(highest_peak_finish))
 
 ```{r}
 ggplot() +
-  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance,
-                                               y = -1, yend = g_r),
-               linetype = "dashed", color = "red", inherit.aes = FALSE) +
-  geom_text(data = highest_peak_finish, aes(x = Radical_distance, y = g_r,
-                                            label = sprintf("%.3f", Radical_distance)),
-            vjust = 2.8, hjust = -0.2, color = "black", inherit.aes = FALSE)
+  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance, y = -1, yend = g_r), linetype = "dashed", color = "red") +
+  
+  geom_text(data = highest_peak_finish, aes(x = Radical_distance, y = g_r, label = sprintf("%.3f", Radical_distance)), vjust = 2.8, hjust = -0.2, color = "black")
 
 ```
 
@@ -162,23 +159,17 @@ ggplot() +
 print(data_c_filtered_finish)
 ```
 
+
 ```{r}
 # original plot in the paper
 ggplot(data_c_filtered_finish, aes(x = Radical_distance, y = g_r, color = Measurement)) +
   geom_line() +
   
-  scale_color_manual(values = c("D_D2-Eu" = "black", "D_D2-H" = "red", 
-                                 "D_D2-N" = "purple", "D_D2-C" = "green", 
-                                 "D_D2-O" = "cyan"),
-                     breaks = c("D_D2-Eu", "D_D2-H", "D_D2-N", "D_D2-C", "D_D2-O")) +
+  scale_color_manual(values = c("D_D2-Eu" = "black", "D_D2-H" = "red", "D_D2-N" = "purple", "D_D2-C" = "green",  "D_D2-O" = "cyan"), breaks = c("D_D2-Eu", "D_D2-H", "D_D2-N", "D_D2-C", "D_D2-O")) +
   
-  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance,
-                                               y = -1, yend = g_r),
-               linetype = "dashed", color = "red", inherit.aes = FALSE) +
+  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance, y = -1, yend = g_r), linetype = "dashed", color = "red") +
   
-  geom_text(data = highest_peak_finish, aes(x = Radical_distance, y = g_r,
-                                            label = sprintf("%.3f", Radical_distance)),
-            vjust = 27, hjust = -0.2, color = "black", inherit.aes = FALSE) +
+  geom_text(data = highest_peak_finish, aes(x = Radical_distance, y = g_r, label = sprintf("%.3f", Radical_distance)), vjust = 34, hjust = -0.2, color = "black") +
   
   scale_x_continuous(limits = c(-0.1, 1),
                      breaks = seq(0, 1, by = 0.2),
@@ -206,31 +197,34 @@ ggplot(data_c_filtered_finish, aes(x = Radical_distance, y = g_r, color = Measur
 ```{r}
 # Improved plot 
 ggplot(data_c_filtered_finish, aes(x = Radical_distance, y = g_r, color = Measurement)) +
+  
   geom_line() +
   
-  scale_color_manual(values = c("D_D2-Eu" = "black", "D_D2-H" = "red", "D_D2-N" = "purple", "D_D2-C" = "green","D_D2-O" = "cyan"),
-   breaks = c("D_D2-Eu", "D_D2-H", "D_D2-N",  "D_D2-C","D_D2-O")) +
+  scale_color_manual(values = c("D_D2-Eu" = "black", "D_D2-H" = "red", "D_D2-N" = "purple", "D_D2-C" = "green","D_D2-O" = "cyan"), breaks = c("D_D2-Eu", "D_D2-H", "D_D2-N",  "D_D2-C","D_D2-O")) +
   
-  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance,
-                                        y = -1, yend = g_r),
-               linetype = "dashed", color = "red") +
- 
-  geom_label(data = highest_peak_finish, aes(x = Radical_distance * 0.1, y = g_r, label = sprintf("%.3f ", Radical_distance)),
-             vjust = 15.5, hjust = -1.5, color = "blue", fill = "white", fontface = "bold", size = 3.5, label.size = 0.5) +
+  geom_segment(data = highest_peak_finish, aes(x = -0.1, xend = Radical_distance, y = g_r, yend = g_r), linetype = "dashed", color = "red") +
   
-  scale_x_continuous(limits = c(-0.1,1),    breaks = seq(0, 1, by = 0.2), labels = function(x) sprintf("%.1f", x)) +
+  geom_segment(data = highest_peak_finish, aes(x = Radical_distance, xend = Radical_distance, y = -1, yend = g_r), linetype = "dashed", color = "red") +
+  
+  geom_label(data = highest_peak_finish, aes(x = Radical_distance, y = g_r, label = sprintf("%.5f", g_r)), vjust = 0, hjust = 4, color = "orange", fill = "white", fontface = "bold", size = 3.5, label.size = 0.5) +
+  
+  geom_label(data = highest_peak_finish, aes(x = Radical_distance * 0.1, y = g_r, label = sprintf("%.3f ", Radical_distance)), vjust = 21, hjust = -2.5, color = "blue", fill = "white", fontface = "bold", size = 3.5, label.size = 0.5) +
+  
+  scale_x_continuous(limits = c(-0.1,1), breaks = seq(0, 1, by = 0.2), labels = function(x) sprintf("%.1f", x)) +
   
   ylim(-1, 8.5) +
   
   labs(
-    title = "Radial Distribution Function of various atom pairs",
+    title = "Radial Distribution Function of Various Atom Pairs",
     x = "Radical Distance (nm)\nadsorbed deuterium atoms (D_D2)",
     y = "the framework atoms(Eu,H,N,C,O)\ng(r)",
     color = "Measurement Type"
   ) +
+  
   theme_minimal() +
   theme(legend.position = "right",
         plot.title = element_text(hjust = 0.5) )
+
 # RDF of various atom pairs between adsorbed deuterium atoms (D_D2) and the framework atoms
 
 # Figure 4C shows that the first prominent peak for D2 adsorption occurs at 0.266 nm, corresponding to the D_D2-Eu atom pair, reaffirming the preferential adsorption of Eu clusters toward D2
@@ -242,107 +236,7 @@ library(rmarkdown)
 ```
 
 ```{r}
-render("Figure_assignment.Rmd", output_format = "html_document")
+# render("Figure_assignment.Rmd", output_format = "html_document")
 # render("Figure_assignment.Rmd", output_format = "pdf_document")
 ```
 
-# Figure D
-
-```{r}
-print(data_d)
-
-```
-
-```{r}
-library(tidyr)
-library(dplyr)
-```
-
-```{r}
-data_d_long_new <- data_d %>%
-  pivot_longer(
-    cols = starts_with("..."),
-    names_to = "region", 
-    values_to = "od_percentage" 
-  ) %>%
-  mutate(
-    od_percentage = case_when(
-      od_percentage == "OD%<0.2Å" ~ 0.2,
-      od_percentage == "OD%<0.1Å" ~ 0.1,
-      TRUE ~ as.numeric(od_percentage)
-    )
-  )
-
-data_d_long_new <- data_d_long_new %>%
-  filter(!is.na(`CSD code`))
-head(data_d_long_new)
-```
-
-```{r}
-colnames(data_d_long)
-```
-
-```{r}
-install.packages("janitor")
-```
-
-```{r}
-library(janitor)
-```
-
-```{r}
-data_d_long <- clean_names(data_d_long)
-colnames(data_d_long)
-```
-
-```{r}
-print(data_d_long)
-```
-
-```{r}
-str(data_d_long$od_percentage)
-
-unique(data_d_long$od_percentage)
-
-```
-
-```{r}
-data_d_long <- data_d_long %>%
-  mutate(od_percentage = case_when(
-    od_percentage == "OD%<0.2Å" ~ 0.2,
-    od_percentage == "OD%<0.1Å" ~ 0.1,
-    TRUE ~ as.numeric(as.character(od_percentage))
-  ))
-
-```
-
-```{r}
-data_d_long <- data_d_long %>%
-  filter(!grepl("OD%", od_percentage)) %>%
-  mutate(od_percentage = as.numeric(as.character(od_percentage)))
-```
-
-```{r}
-str(data_d_long$od_percentage)
-sum(is.na(data_d_long$od_percentage))
-```
-
-```{r}
-data_d_long
-```
-
-```{r}
-library(ggplot2)
-
-ggplot(data_d_long, aes(x = factor(csd_code, levels = unique(csd_code)), 
-                        y = od_percentage, 
-                        fill = region)) +
-  geom_violin(trim = FALSE, alpha = 0.5, color = NA) + 
-  geom_boxplot(width = 0.1, color = "gray", alpha = 0.8, outlier.shape = NA) + 
-  geom_hline(yintercept = 50, linetype = "dashed", color = "red") + 
-  scale_y_continuous(labels = scales::percent_format(scale = 1)) + 
-  labs(x = "CSD Code", y = "Overlap Degree (%)", fill = "Region") + 
-  theme_minimal(base_size = 14) + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-```
