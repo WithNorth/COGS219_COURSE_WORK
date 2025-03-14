@@ -213,6 +213,54 @@ questions_chinese = [
     }
 ]
 
+# Here is the questions in English for demo only
+# The video is in Chinese because it is a better way to find the video with both subtitles and the live comment
+# In the experiment, I would still use questionsin Chinese for the better response time 
+# because Chinese speakers will have a quicker respond time for the native language
+
+questions_chinese = [
+    {
+        'question': 'Who was the first zodiac they met?',
+        'options': {'a': 'Mortal Goat', 'b': 'Terrestrial Ox', 'c': 'Mortal Dragon', 'd': 'Terrestrial Snake','e':'Terrestrial Monkey'},
+        'correct_answer': 'a' # 人羊
+    },
+    {
+        'question': 'Which profession is not included among the characters introduced in the video?',
+        'options': {'a': 'Doctor', 'b': 'Firefighter', 'c': 'Police', 'd': 'lawyer','e':'psychological counselor'},
+        'correct_answer': 'b' #消防员
+    },
+    {
+        'question': 'In the game "Warehouse Search", how many minutes do you have to find the ball (that needs to be collected)?',
+        'options': {'a': '10 mins', 'b': '20 mins', 'c': '3 mins', 'd': '5 mins','e':'8 mins'},
+        'correct_answer': 'd' #五分钟
+    },    
+    {
+        'question': 'The Mortal Pig said what did it rely on to survive every day before?',
+        'options': {'a': 'Luck', 'b': 'Strength', 'c': 'Perseverance', 'd': 'Life','e':'Connections'},
+        'correct_answer': 'a' #运气
+    },    
+    {
+        'question': 'What was the code (password) that was solved in the video?',
+        'options': {'a': 'NI SHI HUN DAN', 'b': 'WO YAO HUO ZHE', 'c': 'JI DAO WAN SUI', 'd': 'HAPPY BIRTHDAY','e':'ZHANG GUAN MING YUN'},
+        'correct_answer': 'c'
+    },    
+    {
+        'question': 'Which of the following games does not appear in the video?',
+        'options': {'a': 'Four Emotional Fans', 'b': 'Penglai', 'c': 'Disaster Year', 'd': 'Five Finger Discount','e':'Reversi'},
+        'correct_answer': 'd' # 顺手牵羊
+    },
+    {
+        'question': 'Which zodiac is in charge of the game Wooden Ox?',
+        'options': {'a': 'Terrestrial Ox', 'b': 'Ox and horses', 'c': 'Mortal Horse', 'd': 'Terrestrial Horse','e':'Mortal Ox'},
+        'correct_answer': 'd' #地马
+    },
+    {
+        'question': 'The truth mentioned in the video is that as long as we do this, we will meet each other? \n How can we meet each other?',
+        'options': {'a': 'Being calm', 'b': 'Persisting', 'c': 'Being alive', 'd': 'Being brave','e':'Missing'},
+        'correct_answer': 'e'
+    }
+]
+
 
 results = present_questions(win, questions_chinese, participant_name, save_file='participants_results')
 for result in results:

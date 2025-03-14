@@ -1,0 +1,31 @@
+Question1: 他们见到的第一位生肖是谁？ Who was the first zodiac they met?
+Options1: A. 人羊 Mortal Goat B. 地牛 Terrestrial Ox C. 人龙 Mortal Dragon D. 地蛇  Terrestrial Snake E. 地猴 Terrestrial Monkey
+Correct_answer1: A. 人羊 Mortal Goat
+
+Question2: 这里面介绍的人物中没有哪一个职业？ Which profession is not included among the characters introduced here?
+Options2: A.医生 Doctor B. 消防员 Firefighter C. 刑警 Police D. 律师 lawyer e. 心理咨询师 psychological counselor
+Correct_answer2: B.消防员 Firefighter
+
+Question3: 仓库寻道 要求几分钟内找到道（那颗需要收集的球）？ In the game "Warehouse Search", how many minutes do you have to find the ball(that needs to be collected)?
+Options3: A. 十分钟 10 mins B.二十分钟 20 mins C. 三分钟 3 mins D. 五分钟 5 mins E. 八分钟 8 mins
+Correct_answer3: D.五分钟 5 mins
+
+Question4: 人猪说它之前每天都靠什么来过日子？ The  Mortal Pig said what did it rely on to survive every day before?
+Options4: A. 运气 Luck B. 力量 Strength C. 毅力 perseverance D. 生命 Life E. 人脉 Connections
+Correct_answer4: A. 运气 Luck
+
+Question5: 视频中曾解开的一次密码是什么？ What was the code that was solved in the video?
+Options5: A. NI SHI HUN DAN B. WO YAO HUO ZHE C. JI DAO WAN SUI D. HAPPY BIRTHDAY E. ZHANG GUAN MING YUN
+Correct_answer5: C. JI DAO WAN SUI
+
+Question6: 以下选项中视频中没有出现过的游戏是？ Which of the following games does not appear in the video?
+Options6: A. 四情扇 Four Emotional Fans B. 蓬莱 Penglai C. 灾厄年 Disaster year D.顺手牵羊 five finger discount E. 黑白棋 Reversi
+Correct_answer6: D.顺手牵羊  five finger discount
+
+Question7: 掌管游戏 木牛流马 Wooden ox 的是哪一个生肖？ Which zodiac is in charge of the game Wooden ox?
+Options7: A.地牛 Terrestrial Ox B. 牛马 oxen and horses; beasts of burden C. 人马 Mortal Horse D. 地马 Terrestrial Horse E. 人牛 Mortal Ox
+Correct_answer7: D. 地马 Terrestrial Horse 
+
+Question8: 视频中提到的悟出的道理是只要怎么样就会相见？ The truth mentioned in the video is that as long as we do this, we will meet each other? How can we meet each other?
+Options8: A. 冷静 Being calm B. 活着 Being alive C. 坚持 Persisting D. 勇敢 Being brave E. 想念 Missing
+Correct_answer8: E. 想念 Missing
